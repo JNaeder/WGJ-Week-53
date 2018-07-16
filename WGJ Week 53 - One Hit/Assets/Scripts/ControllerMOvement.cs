@@ -7,7 +7,7 @@ public class ControllerMOvement : MonoBehaviour {
     public float speed = 1f;
     public float attackspeed;
     public float xClamp, yClamp;
-    public bool isAttacking;
+    public bool isAttacking, isDead;
     public float scoreDecreaseSpeed;
 
     bool isGameOver;
@@ -36,6 +36,7 @@ public class ControllerMOvement : MonoBehaviour {
             DecreasingScore();
 
         anim.SetBool("isAttacking", isAttacking);
+		anim.SetBool("isDead", isDead);
 	}
 
 
@@ -66,7 +67,11 @@ public class ControllerMOvement : MonoBehaviour {
 
 
             }
-        }
+		} else {
+			float h = Input.GetAxis("Horizontal");
+            transform.position += new Vector3(h, 0, 0) * Time.deltaTime * speed;
+
+		}
 
     }
     void DecreasingScore() {
@@ -74,16 +79,20 @@ public class ControllerMOvement : MonoBehaviour {
             if (gM.score > 0) {
                 gM.score -= Time.deltaTime * scoreDecreaseSpeed;
 
-            }
+			} else if(gM.score < 0){
+				gM.score = 0;
+			}
 
         }
 
     }
 
     void GameOver() {
+		isDead = true;
         lM.speed = 0;
         attackspeed = 0;
         speed = 0;
+		scoreDecreaseSpeed = gM.score / 2;
         isGameOver = true;
         gM.GameOver();
     }

@@ -9,7 +9,6 @@ public class LeverGenerator : MonoBehaviour {
     public Transform spawner;
     public Transform levelParent;
     public float spawnRange;
-    public float minSize, maxSize;
     public float bufferSize;
 
     Camera cam;
@@ -52,9 +51,7 @@ public class LeverGenerator : MonoBehaviour {
         int randNewCoin = Random.Range(0, coins.Length);
 
 
-        float newScaleX = Random.Range(minSize, maxSize);
-        Vector3 newScale = new Vector3(newScaleX, 1, 0);
-        pieces[randNewPiece].transform.localScale = newScale;
+        
         SpriteRenderer pieceRend = pieces[randNewPiece].GetComponent<SpriteRenderer>();
         float pieceExtent = pieceRend.bounds.extents.x;
 
