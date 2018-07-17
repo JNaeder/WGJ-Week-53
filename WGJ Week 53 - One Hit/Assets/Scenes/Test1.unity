@@ -684,6 +684,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces:
   - {fileID: 1629035879019450, guid: 0d5a9bdff8695494193cc8228c5d13ec, type: 2}
+  - {fileID: 1198072523122184, guid: 05c99d827db7c497ca9a69c49bf9a9cd, type: 2}
+  - {fileID: 1435475078571624, guid: 4b1cc0fab87a7495fb39ed43b4680d39, type: 2}
+  - {fileID: 1225462442097050, guid: 5d8ce4e8f04274a249cf09bc399fb63a, type: 2}
   coins:
   - {fileID: 1199374584137622, guid: fb5e01a20d93466438cadaf18bc0f3cb, type: 2}
   - {fileID: 1199374584137622, guid: fb5e01a20d93466438cadaf18bc0f3cb, type: 2}
