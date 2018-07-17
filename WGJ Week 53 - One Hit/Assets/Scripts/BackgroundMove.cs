@@ -23,7 +23,7 @@ public class BackgroundMove : MonoBehaviour {
 
 		if (lM.hasStarted)
 		{
-			matOffset = Vector2.up * Time.deltaTime * (lM.speed * 2) * .01f;
+			matOffset = Vector2.up * Time.deltaTime * 0.1f * (lM.speed / speed);
 			rend.material.mainTextureOffset += matOffset;
 		}
 	}

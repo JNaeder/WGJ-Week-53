@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,16 +13,25 @@ public class GameManager : MonoBehaviour {
     public GameObject gameOverScreen, winScreen;
     public GameObject gameOverRestartButton, winRestartButton;
     public TextMeshProUGUI scoreNumText, winScreenScoreNum;
+	public GameObject scoreUI;
+
+	public PlayableDirector winTimeline;
 
     int tempScore = 50;
 
+	bool isGameOver, isWin;
+
     EventSystem eS;
     LevelMovement lM;
+	Animator anim;
+	ControllerMOvement bee;
 
 	// Use this for initialization
 	void Start () {
         eS = FindObjectOfType<EventSystem>();
         lM = FindObjectOfType<LevelMovement>();
+		bee = FindObjectOfType<ControllerMOvement>();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -29,7 +39,7 @@ public class GameManager : MonoBehaviour {
         SetNewSpeed();
 
         scoreNumText.text = score.ToString("F0");
-
+		anim.SetBool("isWin", isWin);
 
 	}
 
@@ -41,13 +51,17 @@ public class GameManager : MonoBehaviour {
     public void GameOver() {
         gameOverScreen.SetActive(true);
         eS.SetSelectedGameObject(gameOverRestartButton);
+		isGameOver = true;
     }
 
 
-    public void WinScreen() {
-        winScreen.SetActive(true);
+	public void WinScreen(){
+		winTimeline.Play();
+		scoreUI.SetActive(false);
+		SetWinScreenPosition();      
         eS.SetSelectedGameObject(winRestartButton);
         winScreenScoreNum.text = score.ToString();
+		isWin = true;
 
     }
 
@@ -59,4 +73,28 @@ public class GameManager : MonoBehaviour {
         }
 
     }
+
+
+	void SetWinScreenPosition(){
+		Vector3 beePos = bee.transform.position;
+		LineRenderer lineRend = bee.lineRend;
+		lineRend.enabled = true;
+		float offset = 7f;
+        lineRend.SetPosition(0, beePos);
+		if(bee.transform.position.x > 0 && bee.transform.position.y > 0){
+			winScreen.transform.position = new Vector3(beePos.x - offset, beePos.y - offset, 0);
+
+		} else if(bee.transform.position.x < 0 && bee.transform.position.y > 0){
+			winScreen.transform.position = new Vector3(beePos.x + offset, beePos.y - offset, 0);
+
+		} else if(bee.transform.position.x > 0 && bee.transform.position.y < 0){
+			winScreen.transform.position = new Vector3(beePos.x - offset, beePos.y + offset, 0);
+		} else if(bee.transform.position.x < 0 && bee.transform.position.y < 0){
+			winScreen.transform.position = new Vector3(beePos.x + offset, beePos.y + offset, 0);
+		}
+
+		lineRend.SetPosition(1, winScreen.transform.position);
+
+
+	}
 }

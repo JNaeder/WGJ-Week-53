@@ -11,10 +11,12 @@ public class Person : MonoBehaviour {
     bool isAttacked;
 
     Animator anim;
+	SpriteRenderer sP;
 
 	// Use this for initialization
 	void Start () {
         personSpeed = Random.Range(speedRangeMin, speedRangeMax);
+		sP = GetComponent<SpriteRenderer>();
 
         anim = GetComponent<Animator>();
 	}
@@ -34,6 +36,6 @@ public class Person : MonoBehaviour {
 
     public void GetAttacked() {
         isAttacked = true;
-
+		sP.sortingLayerName = "Person";
     }
 }

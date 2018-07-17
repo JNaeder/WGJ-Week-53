@@ -135,6 +135,7 @@ MonoBehaviour:
   xClamp: 0
   yClamp: 0
   isAttacking: 0
+  isDead: 0
   scoreDecreaseSpeed: 20
 --- !u!212 &212649416606658634
 SpriteRenderer:
@@ -168,8 +169,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1167401819
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b0c96b862c9f29942bcab5e92f0d61c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -71,7 +71,7 @@ public class LeverGenerator : MonoBehaviour {
         
             while (newCoinPos.x < newPiecePos.x + pieceExtent + bufferSize && newCoinPos.x > newPiecePos.x - pieceExtent - bufferSize)
             {
-                Debug.Log("Wrong Coin Place");
+                //Debug.Log("Wrong Coin Place");
                 newCoinX = Random.Range(-spawnRange, spawnRange);
                 newCoinPos = new Vector3(newCoinX, spawner.position.y, 0);
             }

@@ -17,11 +17,15 @@ public class ControllerMOvement : MonoBehaviour {
     Animator anim;
     Camera cam;
 
+	[HideInInspector]
+	public LineRenderer lineRend;
+
 	// Use this for initialization
 	void Start () {
         lM = FindObjectOfType<LevelMovement>();
         gM = FindObjectOfType<GameManager>();
         anim = GetComponent<Animator>();
+		lineRend = GetComponent<LineRenderer>();
         cam = Camera.main;
 
         Vector3 camScreen = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
@@ -116,9 +120,10 @@ public class ControllerMOvement : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Coin") {
-            Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
+			Flower flower = collision.gameObject.GetComponent<Flower>();
+			flower.PlayParticle();
             gM.score += 10;
-            Debug.Log("Get Coin!");
         }
         if (collision.gameObject.tag == "Piece") {
             GameOver();
