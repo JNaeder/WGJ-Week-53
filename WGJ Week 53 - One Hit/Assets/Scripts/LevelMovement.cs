@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class LevelMovement : MonoBehaviour {
     public float speed = 1f;
     public float newTime;
 
     public bool hasStarted = false;
+
+    [FMODUnity.EventRef]
+    public string startGameSound;
 
     MusicPlayer mP;
 
@@ -22,6 +26,7 @@ public class LevelMovement : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                FMODUnity.RuntimeManager.PlayOneShot(startGameSound);
                 hasStarted = true;
                 newTime = Time.time;
                 mP.StartMusic();

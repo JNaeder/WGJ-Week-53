@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f3853809-8375-47f9-9ae6-76be49ce05aa}">
+        <property name="assetPath">
+            <value>StringSounds/StingSound_4.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>12.166303854875283</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{85d1ab28-c419-4cf7-9a87-f23e1ade396f}</destination>
+        </relationship>
+    </object>
+</objects>

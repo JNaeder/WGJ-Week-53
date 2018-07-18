@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{92db58b6-c582-4fd8-99c6-73edce1feb18}">
+        <property name="assetPath">
+            <value>FlowerPickUp/FlowerPickUp_Synth1.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.81229024943310657</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{85d1ab28-c419-4cf7-9a87-f23e1ade396f}</destination>
+        </relationship>
+    </object>
+</objects>

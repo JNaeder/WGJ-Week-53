@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.Playables;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour {
 
@@ -16,6 +17,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject scoreUI;
 
 	public PlayableDirector winTimeline;
+
+    [FMODUnity.EventRef]
+    public string stingSound;
 
     int tempScore = 50;
     public int speedChangeCount;
@@ -47,7 +51,7 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void RestartScene() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -67,6 +71,8 @@ public class GameManager : MonoBehaviour {
         eS.SetSelectedGameObject(winRestartButton);
         winScreenScoreNum.text = score.ToString();
 		isWin = true;
+        mP.StopMusic();
+        FMODUnity.RuntimeManager.PlayOneShot(stingSound);
 
     }
 

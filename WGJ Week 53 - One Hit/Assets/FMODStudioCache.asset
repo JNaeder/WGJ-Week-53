@@ -17,10 +17,143 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 114791483596819556}
   - {fileID: 114624432243930324}
+  - {fileID: 114009913119123088}
+  - {fileID: 114047583469253854}
+  - {fileID: 114442315936198328}
+  - {fileID: 114492860930442430}
+  - {fileID: 114487166076124068}
+  - {fileID: 114002121000212594}
+  - {fileID: 114734946605289796}
   MasterBankRef: {fileID: 114625696702464908}
   StringsBankRef: {fileID: 114536100607016988}
-  stringsBankWriteTime: 636674701302549209
+  stringsBankWriteTime: 636675177002132268
   cacheVersion: 2
+--- !u!114 &114002121000212594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ButtonHover
+  guid: b7c44f3995effb439dbb0ced42137e3c
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 110
+--- !u!114 &114009913119123088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Flower_PickUp
+  guid: baa1495acc32474ba3eda82a64709239
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1281
+--- !u!114 &114039521786722394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114047583469253854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/PointGoDown
+  guid: ace4689022411547b710a14cc9615e68
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 31
+--- !u!114 &114058909998016650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114165531812566764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114180756200384954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
 --- !u!114 &114182518102985112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +199,102 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 0
+--- !u!114 &114417891393248666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114433107057007252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114442315936198328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Lose Game
+  guid: 520e3b162aca144ca2bf644e3fee8796
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114487166076124068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Win Game
+  guid: b3d45148902aa34d92ad21ede4eb337e
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114492860930442430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Start Game
+  guid: 86d03bd50493ca43852c4860d5245ecd
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 956
 --- !u!114 &114503730983054852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,11 +323,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\John\Documents\GitHub\WGJ-Week-53\WGJ Week 53 FMOD Session\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636674701302549209
+  lastModified: 636675177002132268
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 766
+    Value: 1066
   Exists: 1
 --- !u!114 &114624432243930324
 MonoBehaviour:
@@ -135,12 +364,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\John\Documents\GitHub\WGJ-Week-53\WGJ Week 53 FMOD Session\Build\Desktop\Master
     Bank.bank
-  lastModified: 636674701302509215
+  lastModified: 636675177002062261
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1873952
+    Value: 2286304
   Exists: 1
+--- !u!114 &114669262932751238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114714924582308118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114734946605289796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/StingSound
+  guid: bc394fe13ac0c44d9db83ee25d0fe916
+  Banks:
+  - {fileID: 114625696702464908}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 15338
 --- !u!114 &114791483596819556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +441,26 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114833846325404736}
+  - {fileID: 114669262932751238}
   MinDistance: 0
   MaxDistance: 0
   Length: 93188
 --- !u!114 &114833846325404736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SpeedChangeCount
+  Min: 0
+  Max: 7
+  Default: 0
+--- !u!114 &114900415474455272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class ControllerMOvement : MonoBehaviour {
     
@@ -9,6 +10,11 @@ public class ControllerMOvement : MonoBehaviour {
     public float xClamp, yClamp;
     public bool isAttacking, isDead;
     public float scoreDecreaseSpeed;
+
+    [FMODUnity.EventRef]
+    public string flowerPickUpSound, pointsGoDpwnSound;
+
+    FMOD.Studio.EventInstance pointsGoingDown;
 
     bool isGameOver;
 
@@ -82,6 +88,9 @@ public class ControllerMOvement : MonoBehaviour {
         if (isGameOver) {
             if (gM.score > 0) {
                 gM.score -= Time.deltaTime * scoreDecreaseSpeed;
+                pointsGoingDown = FMODUnity.RuntimeManager.CreateInstance(pointsGoDpwnSound);
+                pointsGoingDown.start();
+                pointsGoingDown.release();
 
 			} else if(gM.score < 0){
 				gM.score = 0;
@@ -124,6 +133,7 @@ public class ControllerMOvement : MonoBehaviour {
 			Flower flower = collision.gameObject.GetComponent<Flower>();
 			flower.PlayParticle();
             gM.score += 10;
+            FMODUnity.RuntimeManager.PlayOneShot(flowerPickUpSound);
         }
         if (collision.gameObject.tag == "Piece") {
             GameOver();
