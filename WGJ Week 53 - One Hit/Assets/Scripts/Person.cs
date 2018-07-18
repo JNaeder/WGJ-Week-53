@@ -12,11 +12,13 @@ public class Person : MonoBehaviour {
 
     Animator anim;
 	SpriteRenderer sP;
+    Rigidbody2D rB;
 
 	// Use this for initialization
 	void Start () {
         personSpeed = Random.Range(speedRangeMin, speedRangeMax);
 		sP = GetComponent<SpriteRenderer>();
+        rB = GetComponent<Rigidbody2D>();
 
         anim = GetComponent<Animator>();
 	}
@@ -35,6 +37,7 @@ public class Person : MonoBehaviour {
 
 
     public void GetAttacked() {
+        rB.isKinematic = true;
         isAttacked = true;
 		sP.sortingLayerName = "Person";
     }

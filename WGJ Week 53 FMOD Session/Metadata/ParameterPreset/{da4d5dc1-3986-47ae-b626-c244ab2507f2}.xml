@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{da4d5dc1-3986-47ae-b626-c244ab2507f2}">
+        <property name="name">
+            <value>SpeedChangeCount</value>
+        </property>
+        <relationship name="folder">
+            <destination>{631af498-a716-4997-bfbd-896513906fcf}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{62c65fc0-18a6-4a20-a42e-76ab5c07dbb7}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{62c65fc0-18a6-4a20-a42e-76ab5c07dbb7}">
+        <property name="maximum">
+            <value>7</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

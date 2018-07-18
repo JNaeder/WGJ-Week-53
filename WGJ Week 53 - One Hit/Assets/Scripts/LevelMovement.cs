@@ -8,10 +8,12 @@ public class LevelMovement : MonoBehaviour {
 
     public bool hasStarted = false;
 
+    MusicPlayer mP;
+
 
 	// Use this for initialization
 	void Start () {
-		
+        mP = FindObjectOfType<MusicPlayer>();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +24,7 @@ public class LevelMovement : MonoBehaviour {
             {
                 hasStarted = true;
                 newTime = Time.time;
+                mP.StartMusic();
             }
         }
         else {

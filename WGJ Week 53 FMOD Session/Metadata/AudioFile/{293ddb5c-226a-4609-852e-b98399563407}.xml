@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{293ddb5c-226a-4609-852e-b98399563407}">
+        <property name="assetPath">
+            <value>Ambience_1.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>24</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{85d1ab28-c419-4cf7-9a87-f23e1ade396f}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
 	public PlayableDirector winTimeline;
 
     int tempScore = 50;
+    public int speedChangeCount;
 
 	bool isGameOver, isWin;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour {
     LevelMovement lM;
 	Animator anim;
 	ControllerMOvement bee;
+    MusicPlayer mP;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour {
         lM = FindObjectOfType<LevelMovement>();
 		bee = FindObjectOfType<ControllerMOvement>();
 		anim = GetComponent<Animator>();
+        mP = FindObjectOfType<MusicPlayer>();
 	}
 	
 	// Update is called once per frame
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour {
         gameOverScreen.SetActive(true);
         eS.SetSelectedGameObject(gameOverRestartButton);
 		isGameOver = true;
+        mP.StopMusic();
+
     }
 
 
@@ -68,6 +73,7 @@ public class GameManager : MonoBehaviour {
     void SetNewSpeed() {
         if (score >= tempScore) {
             lM.speed++;
+            speedChangeCount++;
             tempScore += tempScore;
 
         }
