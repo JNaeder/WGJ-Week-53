@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour {
         mP = FindObjectOfType<MusicPlayer>();
 		cam = Camera.main;
 		hSM = GetComponent<HighScoreManager>();
+
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame

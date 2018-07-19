@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour {
 
 
     [FMODUnity.EventRef]
-    public string buttonHoverSound;
+    public string buttonHoverSound, startMenuSound;
 
 
 	public GameObject mainMenu, howToPlayMenu, highscoresMenu;
@@ -20,7 +20,10 @@ public class StartMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		eS = FindObjectOfType<EventSystem>();
-	}
+
+        FMODUnity.RuntimeManager.PlayOneShot(startMenuSound);
+        Cursor.visible = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {

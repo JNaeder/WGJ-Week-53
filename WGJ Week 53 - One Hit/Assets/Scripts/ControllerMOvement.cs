@@ -12,7 +12,7 @@ public class ControllerMOvement : MonoBehaviour {
     public float scoreDecreaseSpeed;
 
     [FMODUnity.EventRef]
-    public string flowerPickUpSound, pointsGoDpwnSound;
+    public string flowerPickUpSound, pointsGoDpwnSound, beeDeathSound, winSound;
 
     FMOD.Studio.EventInstance pointsGoingDown;
 
@@ -108,6 +108,7 @@ public class ControllerMOvement : MonoBehaviour {
 		scoreDecreaseSpeed = gM.score / 2;
         isGameOver = true;
         gM.GameOver();
+        FMODUnity.RuntimeManager.PlayOneShot(beeDeathSound);
     }
 
     void ScreenCrossOver() {
@@ -141,6 +142,7 @@ public class ControllerMOvement : MonoBehaviour {
         if (collision.gameObject.tag == "Person") {
             if (isAttacking)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(winSound);
                 Person person = collision.gameObject.GetComponent<Person>();
                 person.GetAttacked();
                 gM.WinScreen();
