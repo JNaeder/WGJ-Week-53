@@ -8,6 +8,7 @@ public class LevelMovement : MonoBehaviour {
     public float newTime;
 
     public bool hasStarted = false;
+	public GameObject pressSpaceToStartText;
 
     [FMODUnity.EventRef]
     public string startGameSound;
@@ -30,6 +31,7 @@ public class LevelMovement : MonoBehaviour {
                 hasStarted = true;
                 newTime = Time.time;
                 mP.StartMusic();
+				pressSpaceToStartText.SetActive(false);
             }
         }
         else {
